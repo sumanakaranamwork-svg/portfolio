@@ -1,12 +1,8 @@
 import React, { useState } from "react";
-import axios from "axios";
 import SectionHeader from "./SectionHeader";
 import { profile } from "../data/portfolio";
 import { Toaster, toast } from "sonner";
 import { Mail, Linkedin, Github, Send, Phone } from "lucide-react";
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
@@ -24,11 +20,17 @@ const Contact = () => {
     }
     setLoading(true);
     try {
-      await axios.post(`${API}/contact`, form);
-      toast.success("Message sent. I'll get back within 24h.");
-      setForm({ name: "", email: "", subject: "", message: "" });
+      const subject = encodeURIComponent(form.subject || `Portfolio inquiry from ${form.name}`);
+      const body = encodeURIComponent(
+        `Hi Sumana,\n\n${form.message}\n\n—\nFrom: ${form.name}\nEmail: ${form.email}`
+      );
+      window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
+      toast.success("Opening your email — hit send and you're done!");
+      setTimeout(() => {
+        setForm({ name: "", email: "", subject: "", message: "" });
+      }, 600);
     } catch (err) {
-      toast.error("Could not send. Try email instead.");
+      toast.error("Couldn't open mail client. Email me directly.");
       console.error(err);
     } finally {
       setLoading(false);
