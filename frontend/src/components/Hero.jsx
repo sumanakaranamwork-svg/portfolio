@@ -75,21 +75,25 @@ const Hero = () => {
 
         {/* Main */}
         <div className="lg:col-span-7 lg:border-r lg:border-slate-200 py-16 lg:py-24 lg:pr-12">
-          <div className="mb-6 flex items-center gap-3 font-mono-jb text-xs uppercase tracking-[0.22em] text-slate-500">
-            <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-emerald-500" />
+          <div className="mb-6 inline-flex items-center gap-3 border border-slate-200 bg-white px-3 py-1.5 font-mono-jb text-[10px] uppercase tracking-[0.22em] text-slate-700 shadow-sm">
+            <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-500" />
             <span>{profile.status}</span>
           </div>
 
-          <h1 className="font-display text-5xl font-bold leading-[0.95] tracking-tighter text-slate-900 md:text-6xl lg:text-[88px]">
-            Hi, I&apos;m <span className="text-orange-600">Sumana</span>.
+          <h1 className="font-display text-[44px] font-semibold leading-[1.02] tracking-tight text-slate-900 sm:text-6xl lg:text-[88px]">
+            Building with
             <br />
-            I build with
+            <span className="font-serif-display italic text-orange-600">data</span>
+            <span className="text-slate-400"> · </span>
+            <span className="font-serif-display italic">decisions</span>
             <br />
-            <span className="italic">data &amp; intuition.</span>
+            <span className="text-slate-900">that actually ship.</span>
           </h1>
 
           <p className="mt-8 max-w-xl text-base leading-relaxed text-slate-600 md:text-lg">
-            {profile.tagline}
+            I&apos;m <span className="text-slate-900 font-medium">Sumana</span> — an undergrad
+            engineer at Mahindra University working at the intersection of analytics and ML.
+            I build models, dashboards, and the occasional 3 AM Kaggle submission.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">

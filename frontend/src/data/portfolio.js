@@ -30,22 +30,8 @@ export const education = [
     school: "Mahindra University",
     program: "B.Tech · Electronics & Computer Engineering",
     period: "2023 — 2027",
-    score: "CGPA 6.5 / 10",
-    note: "Coursework: DSA, DBMS, Probability & Statistics, Computer Architecture, Signals & Systems.",
-  },
-  {
-    school: "Deeksha Junior College",
-    program: "Intermediate · MPC",
-    period: "2021 — 2023",
-    score: "94%",
-    note: "Mathematics, Physics, Chemistry — Telangana State Board.",
-  },
-  {
-    school: "Little Flower School",
-    program: "Class X · CBSE",
-    period: "2020 — 2021",
-    score: "91%",
-    note: "School topper in Mathematics; foundation for analytical thinking.",
+    score: "Hyderabad, India",
+    note: "Coursework: DSA, DBMS, Probability & Statistics, Computer Architecture, Signals & Systems, Machine Learning.",
   },
 ];
 

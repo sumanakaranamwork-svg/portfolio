@@ -24,7 +24,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 grid grid-cols-12 items-end gap-2 border-t border-slate-200 pt-6">
-          <div className="col-span-12 font-display text-[18vw] font-bold leading-none tracking-tighter text-slate-900 md:text-[12vw] lg:text-[10vw]">
+          <div className="col-span-12 font-display text-[18vw] font-semibold leading-none tracking-tighter text-slate-900 md:text-[12vw] lg:text-[10vw]">
             SUMANA<span className="text-orange-600">.</span>
           </div>
         </div>
