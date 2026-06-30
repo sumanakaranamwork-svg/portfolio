@@ -1,0 +1,26 @@
+{
+  "summary": "Smoke-tested portfolio MVP end-to-end (backend + frontend). All six sections render, navbar links present, hero CTAs work (resume PDF href valid, View Projects scrolls to projects section), three projects render with no broken images, social links have valid hrefs, footer shows name + 'SUMANA' typography. Contact form: empty submit makes no API call (client validation OK); valid submit returns 201 and clears the form. Backend POST /api/contact returns 201 with id, invalid email returns 422, GET /api/contact returns list including the new record. Only a single benign 404 (likely favicon) console error.",
+  "tested_scope": ["frontend", "backend", "integration"],
+  "passed": [
+    "Page loads at root URL with 200",
+    "All six sections present (hero/about/skills/projects/leadership/contact)",
+    "All six navbar links present",
+    "hero-resume-btn href points to expected customer-assets resume PDF",
+    "hero-projects-btn scrolls page from y=0 to y=2991 (projects section)",
+    "All three project cards rendered (HR Analytics, Stock Prediction, IPL Dashboard)",
+    "No broken images detected",
+    "All 7 social/contact links have valid hrefs (github, linkedin, mailto, tel)",
+    "Footer present with 'Karanam Naga Sumana' and 'SUMANA' typography",
+    "Empty contact form submit blocks API call (client validation works)",
+    "Valid contact form submit -> POST /api/contact returned 201 and form cleared",
+    "Backend POST /api/contact with valid payload returns 201 with id (curl)",
+    "Backend POST /api/contact with invalid email returns 422 (curl)",
+    "Backend GET /api/contact returns array including newly created message"
+  ],
+  "failed": [],
+  "action_items": [],
+  "success_rate": {"backend": "100%", "frontend": "100%"},
+  "retest_needed": false,
+  "full_testing_deferred": true,
+  "notes": "Single console.error observed: a 404 on resource load (likely favicon or similar non-critical asset). Did not affect any tested functionality."
+}
