@@ -1,0 +1,140 @@
+{
+  "theme": "light",
+  "archetype": "Swiss & High-Contrast (Editorial IDE / Terminal Light Mode)",
+  "vibe": "Tech/Developer, Code-Inspired, Magazine-meets-IDE, Analytical, Sharp",
+  "domain": "Portfolio / Data Science & ML Engineering",
+  "typography": {
+    "headings": {
+      "family": "Cabinet Grotesk",
+      "import_url": "@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,500,700,400&display=swap');",
+      "rules": "Used for H1, H2, H3. Must use `tracking-tight` or `tracking-tighter`."
+    },
+    "body": {
+      "family": "IBM Plex Sans",
+      "import_url": "@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');",
+      "rules": "Used for all paragraphs and descriptive text. Keep `leading-relaxed`."
+    },
+    "monospace": {
+      "family": "JetBrains Mono",
+      "import_url": "@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');",
+      "rules": "CRITICAL: Use for all overlines, section numbers, metadata, skills tags, and technical UI elements."
+    },
+    "hierarchy": {
+      "h1": "font-['Cabinet_Grotesk'] text-5xl md:text-6xl lg:text-7xl tracking-tighter font-bold text-slate-900",
+      "h2": "font-['Cabinet_Grotesk'] text-3xl md:text-4xl tracking-tight font-bold text-slate-900",
+      "h3": "font-['Cabinet_Grotesk'] text-xl md:text-2xl font-semibold text-slate-900",
+      "overline": "font-mono text-xs uppercase tracking-[0.2em] text-slate-500",
+      "body": "font-['IBM_Plex_Sans'] text-base text-slate-600 leading-relaxed",
+      "code_snippet": "font-mono text-sm text-slate-800 bg-slate-100 p-1 px-2 rounded-sm"
+    }
+  },
+  "colors": {
+    "background": {
+      "primary": "#F8F9FA",
+      "secondary": "#FFFFFF",
+      "tertiary": "#F1F5F9",
+      "tailwind": "bg-slate-50, bg-white, bg-slate-100"
+    },
+    "text": {
+      "primary": "#0F172A",
+      "secondary": "#475569",
+      "muted": "#94A3B8",
+      "tailwind": "text-slate-900, text-slate-600, text-slate-400"
+    },
+    "accents": {
+      "primary": "#EA580C",
+      "primary_description": "Tech Vermilion / Syntax String - Used for main CTAs and highlights",
+      "secondary": "#2563EB",
+      "secondary_description": "Electric Blue / Syntax Keyword - Used for links and secondary tags",
+      "tertiary": "#059669",
+      "tertiary_description": "Console Green / Syntax Comment - Used for success states and minor accents"
+    },
+    "borders": {
+      "default": "#E2E8F0",
+      "tailwind": "border-slate-200"
+    }
+  },
+  "layout_and_spacing": {
+    "grid_system": "The 'Control Room' / 'IDE Layout'. Utilize visible 1px borders (`border-slate-200`) to divide the page into panels rather than floating sections. Embrace asymmetry (e.g., 3-column grid where left column is narrow and acts as a line-number/index pane).",
+    "container_padding": "p-6 md:p-12 lg:p-16",
+    "card_style": "Neo-brutalist / Technical. Flat pure white backgrounds (`bg-white`), sharp corners (`rounded-none` or `rounded-sm`), 1px solid border (`border-slate-200`). On hover, use a sharp solid shadow `shadow-[4px_4px_0px_0px_#0F172A]` and translate slightly `-translate-y-1`.",
+    "spacing_scale": "Generous. Use `gap-8`, `gap-12`, and `py-24` to ensure breathing room inside the rigid grid structure."
+  },
+  "components": {
+    "buttons": "Square or slightly rounded (`rounded-sm`). Primary CTA: `bg-orange-600 hover:bg-orange-700 text-white font-mono uppercase tracking-wider text-sm px-6 py-3`. Secondary CTA: `bg-transparent border border-slate-300 text-slate-900 hover:bg-slate-100 font-mono text-sm px-6 py-3`.",
+    "tags_and_badges": "Font-mono, text-xs, border border-slate-200, px-2 py-1 bg-slate-50 text-slate-600. For tech stack items.",
+    "inputs": "Shadcn based. Use square corners (`rounded-none`), `border-slate-300`, `focus:ring-2 focus:ring-orange-500 focus:border-orange-500`. Label should be font-mono text-xs.",
+    "icons": "Use `lucide-react` with 1.5 stroke width. Keep icon sizes consistent (`w-5 h-5`)."
+  },
+  "interactions_and_motion": {
+    "scroll": "MUST use `lenis` for smooth scrolling. It gives the page a premium, intentional feel.",
+    "animations": "Use `framer-motion`. Staggered fade-up for list items (skills, projects). Typewriter effect for terminal/code-like elements in the hero.",
+    "hover_states": "Interactive elements must show clear state changes. Text links should feature an underline animation. Cards use the hard offset shadow effect."
+  },
+  "content_mapping": {
+    "subject": {
+      "name": "Karanam Naga Sumana",
+      "role": "Aspiring Data Scientist & ML Engineer",
+      "education": "B.Tech Electronics & Computer Engineering, Mahindra University (2023–2027)",
+      "socials": ["Email", "LinkedIn", "GitHub"]
+    },
+    "sections": [
+      {
+        "id": "hero",
+        "title": "00. INIT",
+        "content_instructions": "Design as an IDE pane. Include a simulated 'terminal' window typing out the professional summary. Prominent CTAs for 'View Projects' and 'Download Resume'. Use monospace text for the tagline. Provide a distinct Light Theme editorial vibe using off-white backgrounds."
+      },
+      {
+        "id": "about",
+        "title": "01. SYSTEM_INFO",
+        "content_instructions": "Split pane layout. Left pane: line numbers. Right pane: Bio and Education timeline (Mahindra Univ B.Tech 6.5 CGPA, Deeksha 94%, Little Flower 91%). Add subtle code comment syntax (e.g., `// Background`)."
+      },
+      {
+        "id": "skills",
+        "title": "02. DEPENDENCIES",
+        "content_instructions": "Bento grid or dense tag layout. Group by Languages (C, Python, Java, MATLAB), Libraries (Pandas, NumPy, Scikit-learn, Matplotlib, SQL), and Tools (Jupyter, Git, Google Colab). Color-code tags using the accent colors to mimic syntax highlighting."
+      },
+      {
+        "id": "projects",
+        "title": "03. EXECUTABLES",
+        "content_instructions": "Showcase: HR Analytics, Stock Price Prediction, IPL Data Analytics Dashboard. Display as technical cards with visible borders. Include an image, project title, monospace tech stack tags, and links (GitHub/Live). Use hard shadows on hover."
+      },
+      {
+        "id": "leadership",
+        "title": "04. PROCESSES",
+        "content_instructions": "List layout. 1st Place MANTHAN '25 BITS Pilani, Top 5 Student of the Year Hackathon, Logistics Head leadership roles. Use a sleek, tabular, data-grid inspired layout."
+      },
+      {
+        "id": "contact",
+        "title": "05. SEND_REQ",
+        "content_instructions": "A working contact form (Name, Email, Message) styled like an API request configuration or terminal input. Button 'POST /api/contact'. Will store in MongoDB (API route must be implemented)."
+      }
+    ]
+  },
+  "media": {
+    "images": [
+      {
+        "url": "https://images.pexels.com/photos/97080/pexels-photo-97080.jpeg",
+        "category": "project_placeholder",
+        "description": "White analytics chart, perfect for HR Analytics or IPL Dashboard project thumbnails."
+      },
+      {
+        "url": "https://images.pexels.com/photos/92904/pexels-photo-92904.jpeg",
+        "category": "hero_or_about",
+        "description": "Open laptop on a white desk with code, ideal for Hero section side visual or About background."
+      }
+    ],
+    "rules": "Do NOT use placeholder images from dummy services. Use the provided Pexels URLs. Apply a subtle grayscale or low-saturation filter (`grayscale-[50%]`) on images to match the editorial light theme, bringing back full color on hover."
+  },
+  "testing_requirements": {
+    "rules": "ALL interactive elements (buttons, inputs, links, form submits) MUST have a `data-testid` attribute in kebab-case. Example: `data-testid='hero-resume-btn'` or `data-testid='contact-submit-btn'`."
+  },
+  "developer_instructions": [
+    "Install and use `lucide-react` for icons.",
+    "Install `@studio-freight/react-lenis` for smooth scrolling.",
+    "Install `framer-motion` for reveal animations and typewriter effects.",
+    "Do NOT use `Inter` font. Ensure `Cabinet Grotesk`, `IBM Plex Sans`, and `JetBrains Mono` are imported via Google Fonts / Fontshare.",
+    "When building the layout, use `min-h-screen bg-slate-50 text-slate-900`. Use pure white (`bg-white`) only for cards/panels to create contrast against the off-white background.",
+    "Set up the Contact Form to post to a MongoDB-backed Next.js API route (or equivalent backend in the stack)."
+  ]
+}
